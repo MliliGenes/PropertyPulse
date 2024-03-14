@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="bg-slate-200 ">
-      <div className="flex justify-between items-center max-w-6xl p-3">
+      <div className="flex justify-between items-center max-w-6xl p-3 mx-auto">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-2xl flex flex-wrap ">
             <span className="text-slate-500">Property</span>
             <span className="text-slate-800">Pulse</span>
           </h1>
         </Link>
-        <form className="bg-slate-100 p-3 rounded-lg flex items-center">
+        <form className="bg-slate-100 px-4 py-2 rounded-lg flex items-center">
           <input
             type="text"
             placeholder="Search..."
