@@ -4,9 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 export default function SignUp() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
+    username: null,
+    email: null,
+    password: null,
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,6 @@ export default function SignUp() {
       });
 
       const data = await res.json();
-      console.log(data.success);
 
       if (data.success === false) {
         setError(data.message);
@@ -71,7 +70,7 @@ export default function SignUp() {
           Sign up
         </button>
         <div className="flex gap-2 mt-1 ">
-          <p>have an account?</p>
+          <p>Have an account?</p>
           <Link to="/sign-in">
             <span className="text-sky-800 hover:underline">Sign In</span>
           </Link>
